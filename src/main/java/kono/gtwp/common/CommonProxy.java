@@ -3,6 +3,7 @@ package kono.gtwp.common;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
+import kono.gtwp.GTWPConfig;
 import kono.gtwp.common.data.GTWPRegistration;
 
 public class CommonProxy {
@@ -15,5 +16,6 @@ public class CommonProxy {
     public static void init() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         GTWPRegistration.REGISTRATE.registerRegistrate();
+        GTWPConfig.init();
     }
 }
